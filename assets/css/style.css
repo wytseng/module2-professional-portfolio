@@ -1,17 +1,20 @@
 /* declaring global variables */
+
 :root {
   --light-beige: #eae2db;
   --tan: #e2c0b1;
   --black: #000b20;
 }
 
-/* global css code */
+/* site wide formatting */
+
 * {
   box-sizing: border-box;
 }
 
 p {
   opacity: 80%;
+  line-height: 1.2;
 }
 
 body {
@@ -23,7 +26,7 @@ body {
 /* HEADER */
 
 h1{
-  font-size: 2em;
+  font-size: 5vw;
 }
 
 header {
@@ -32,8 +35,8 @@ header {
   justify-content: space-between;
   align-items: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  padding: 15px 6% 15px 0;
-  font-size: 1.5em;
+  padding: 15px 2% 15px 0;
+  font-size: 2vw;
   font-weight: 600;
   background-color: var(--black);
 }
@@ -44,27 +47,68 @@ header h1 {
   background-color: var(--tan);
 }
 
-header a {
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+nav a {
   text-decoration: none;
   color: var(--tan);
-  padding: 0.1em 0.2em;
+  padding: 0.2em 0.4em;
   margin: 0 0.1em;
   border: 3px solid transparent;
 }
 
-header a:hover {
+nav a:not(:focus):hover {
   border: 3px solid var(--tan);
   border-radius: 5px;
   transition: border 0.5s;
 }
 
-/* BANNER BACKGROUND */
+nav a:focus {
+  background-color: rgba(234,226,219,50%);
+  border: 3px solid var(--tan);
+  border-radius: 5px;
+}
 
-/* .img-banner {
+/* BANNER */
 
-} */
+.img-banner {
+  position: relative;
+  background-image: url("../images/banner-image.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 20em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2em 3em;
+}
 
-/* MAIN */
+.image-container {
+  position: absolute;
+  top: 20px;
+  bottom: 7em;
+}
+
+.img-banner img {
+  border: 4px solid var(--black);
+  border-radius: 50%;
+  max-height: 100%;
+  top: 2em;
+}
+
+.img-banner h2 {
+  font-size: 150%;
+  color: var(--tan);
+  background-color: var(--black);
+  border-radius: 5px;
+  padding: 1em 3em;
+}
+
+/* CONTENT BOX */
 
 .page-wrapper {
   max-width: 80%;
@@ -82,27 +126,26 @@ main {
 .page-section {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   margin: 1.5em 0;
   padding: 0.5em 0;
 }
 
 .page-section h2 {
-  flex: 0 0 20%;
-  font-size: 200%;
+  flex: 0 0 25%;
+  font-size: 4vw;
   text-align: right;
   padding-right: 1.2em;
 }
 
 .section-content {
-  width: 76%;
+  width: 75%;
   border: 5px solid var(--tan);
   padding: 1em 2em;
   border-radius: 10px;
   transition: border 0.5s;
 }
-
-/* ABOUT ME SECTION */
 
 /* WORK SECTION */
 
@@ -115,14 +158,16 @@ main {
 .work-item {
   border: 5px solid var(--black);
   border-radius: 10px;
+  background-color: rgba(234,226,219,40%);
   min-height: 170px;
   max-height: 170px;
   flex-basis: 48%;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   margin: 1%;
   text-decoration: none;
   background-size: cover;
+  background-blend-mode: lighten;
   background-position: 50% 50%;
   transition: all 0.5s;
   font-size: 0.9rem;
@@ -133,8 +178,41 @@ main {
   background-image: url("../images/profile-page.png");
 }
 
+.work-item#project2 {
+  background-image: url("../images/coding.jpeg");
+}
+
+.work-item#project3 {
+  background-image: url("../images/coffee.jpeg");
+}
+
+.work-item#project4 {
+  background-image: url("../images/programming.jpg");
+}
+
+.work-item#project5 {
+  background-image: url("../images/send-emails.jpg");
+}
+
 .work-item:first-child {
   min-height: 350px;
+}
+
+.work-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 5px 5px var(--tan);
+  transition: all 0.5s;
+}
+
+.project-info {
+  background-color: var(--black);
+  color: var(--tan);
+  padding: 10px 10px;
+  width:100%;
+}
+
+.project-info h3 {
+  font-size: 110%;
 }
 
 /* CONTACT ME SECTION */
@@ -146,6 +224,7 @@ main {
 #contact-me .section-content {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 #contact-me a{
@@ -160,4 +239,81 @@ main {
 #contact-me a:hover {
   border-bottom: 3px solid var(--black);
   transition: 0.4s;
+}
+
+/* Responsive CSS Code */
+
+@media screen and (max-width: 900px) {
+  nav a {
+    font-size: 3vw;
+  }
+  #contact-me .section-content {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5em;
+  }
+  #contact-me .section-content a {
+    margin: 0.2em;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  header {
+    margin: 0;
+    padding: 0 0 15px 0;
+    justify-content: center;
+  }
+  header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 8vw;
+  }
+  nav {
+    padding-top: 15px;
+    font-size: 4vw;
+  }
+  .page-section h2 {
+    flex: 0 0 100%;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 5vw;
+  }
+  .section-content {
+    flex: 0 0 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header nav a{
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .img-banner {
+    min-height: 15em;
+  }
+  .img-banner h2 {
+    font-size: 4vw;
+    padding: 1em 2em;
+  }
+  .page-section h2 {
+    font-size: 7vw;
+  }
+  .section-content {
+    padding: 0.5em 1em;
+  }
+  .work-item {
+    flex: 0 0 100%;
+    min-height: 140px;
+    max-height: 140px;
+  }
+  .work-item:first-child {
+    min-height: 140px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .img-banner h2 {
+    font-size: 6vw;
+    padding: 1em 2em;
+  }
 }
