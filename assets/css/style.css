@@ -175,11 +175,11 @@ main {
 
 .work-item#project1 {
   flex-basis: 100%;
-  background-image: url("../images/profile-page.png");
+  background-image: url("../images/work-portfolio.png");
 }
 
 .work-item#project2 {
-  background-image: url("../images/coding.jpeg");
+  background-image: url("../images/work-horiseon.png");
 }
 
 .work-item#project3 {
