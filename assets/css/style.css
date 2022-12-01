@@ -175,7 +175,7 @@ main {
 
 .work-item#project1 {
   flex-basis: 100%;
-  background-image: url("../images/work-portfolio.png");
+  background-image: url("../images/work-animeEcommerce.png");
 }
 
 .work-item#project2 {
@@ -183,7 +183,7 @@ main {
 }
 
 .work-item#project3 {
-  background-image: url("../images/coffee.jpeg");
+  background-image: url("../images/work-portfolio.png");
 }
 
 .work-item#project4 {
