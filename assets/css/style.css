@@ -175,23 +175,23 @@ main {
 
 .work-item#project1 {
   flex-basis: 100%;
-  background-image: url("../images/work-animeEcommerce.png");
+  background-image: url("../images/work-friendfinder.png");
 }
 
 .work-item#project2 {
-  background-image: url("../images/work-horiseon.png");
+  background-image: url("../images/work-animeEcommerce.png");
 }
 
 .work-item#project3 {
-  background-image: url("../images/work-portfolio.png");
+  background-image: url("../images/work-horiseon.png");
 }
 
 .work-item#project4 {
-  background-image: url("../images/programming.jpg");
+  background-image: url("../images/work-portfolio.png");
 }
 
 .work-item#project5 {
-  background-image: url("../images/send-emails.jpg");
+  background-image: url("../images/programming.jpg");
 }
 
 .work-item:first-child {
