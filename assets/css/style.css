@@ -179,19 +179,19 @@ main {
 }
 
 .work-item#project2 {
-  background-image: url("../images/work-animeEcommerce.png");
+  background-image: url("../images/work-communiTEA.png");
 }
 
 .work-item#project3 {
-  background-image: url("../images/work-horiseon.png");
+  background-image: url("../images/work-animeEcommerce.png");
 }
 
 .work-item#project4 {
-  background-image: url("../images/work-portfolio.png");
+  background-image: url("../images/work-bookSearchEngine.png");
 }
 
 .work-item#project5 {
-  background-image: url("../images/programming.jpg");
+  background-image: url("../images/work-portfolio.png");
 }
 
 .work-item:first-child {
